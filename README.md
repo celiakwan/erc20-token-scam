@@ -53,7 +53,7 @@ npm install
 ```
 
 ##### Configuration
-In `dapp` directory, create a `.env` file containing the address of the deployed Token smart contract and 1 account address you imported to MetaMask wallet as the hacker account. Since this DApp is created from `create-react-app`, the environment variables should start with `REACT_APP_`.
+In `dapp` directory, create a `.env` file containing the address of the deployed Token smart contract and the Account #1 address as the hacker account. Since this DApp is created from `create-react-app`, the environment variables should start with `REACT_APP_`.
 ```
 REACT_APP_CONTRACT_ADDRESS="0x5FbDB2315678afecb367f032d93F642f64180aa3"
 REACT_APP_HACKER_ADDRESS="0x70997970c51812dc3a010c7d01b50e0d17dc79c8"
@@ -81,11 +81,11 @@ npm start
     <br/>
     ![Confirm transfer approval](./img/5.png)
 
-4. Now hacker is authorized to spend TOX from victim's account. Go to `http://localhost:3000/hidden`. We can see victim's TOX balance is still 100000000000 and hacker is 0.
+4. Now the hacker is authorized to spend TOX from the victim account. Go to `http://localhost:3000/hidden`. We can see victim's TOX balance is still 100000000000 and hacker is 0.
     <br/>
     ![Balance before hacking](./img/6.png)
 
-5. Let's steal victim's TOX! Switch to hacker account in the MetaMask wallet. Click Get TOX and confirm the transaction.
+5. Let's steal the victim's TOX! Switch to the hacker account in the MetaMask wallet. Click Get TOX and confirm the transaction.
     <br/>
     ![Hacker account](./img/7.png)
     <br/>
@@ -96,17 +96,17 @@ npm start
     ![Balance after hacking](./img/9.png)
 
 ### Phishing Attack Prevention
-Check the full transaction details carefully before confirming any transactions. In this phishing website, the ticket fee is intentionally set to a price same as the estimated transaction fee so as to mislead the users. In fact, the transaction fee is just a service charge you should pay along with the ticket fee. From the example above, if we expand the transaction details, we can see the amount that allows hacker to spend is 9.9999999999e-8 TOX (99999999999). It is extremely dangerous to authorize any accounts to spend your tokens without checking the amount in Permission.
+Check the full transaction details carefully before confirming any transactions. In this phishing website, the ticket fee is intentionally set to a price same as the estimated transaction fee so as to mislead the users. In fact, the transaction fee is just a service charge you should pay along with the ticket fee. From the example above, if we expand the transaction details, we can see the amount that the hacker is allowed to spend is 9.9999999999e-8 TOX (99999999999). It is extremely dangerous to authorize any accounts to spend your tokens without checking the amount in Permission.
 <br/>
 ![Transaction details](./img/10.png)
 
 ### Account Cleanup
-If you want to clean up your accounts and play again, you may need to clean the cache and artifacts using the following command. Then restart Hardhat Network, recompile and redeploy the Token smart contract.
+If you want to clean up your accounts and play again, you may need to remove the cache and artifacts using the following command. Then restart Hardhat Network, recompile and redeploy the Token smart contract.
 ```
 npx hardhat clean
 ```
 
-To reset the nonce for a account in the MetaMask wallet, navigate to Settings, go into Advanced and click Reset Account.
+To reset the nonce for an account in the MetaMask wallet, navigate to Settings, go into Advanced and click Reset Account.
 <br/>
 ![Settings](./img/11.png)
 <br/>
