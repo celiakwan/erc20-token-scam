@@ -1,0 +1,63 @@
+.app {
+  text-align: center;
+}
+
+.app-body {
+  background: #2a22c3;
+  background: linear-gradient(0deg, #2a22c3 0%, #e92a9e 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-s {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 900;
+  margin-top: -100px;
+  margin-bottom: 100px;
+}
+
+.title-m, .title-l {
+  color: #ffc012;
+  font-weight: 900;
+  text-shadow: 1px 1px 1px #945310, 3px 3px 8px #eb8315;
+}
+
+.title-m {
+  font-size: 80px;
+}
+
+.title-l {
+  font-size: 120px;
+}
+
+.btn {
+  background: none;
+  color: #40d6b6;
+  font-size: 20px;
+  font-weight: 600;
+  border: 3px solid #40d6b6;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.error {
+  color: #40d6b6;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.app-content {
+  color: #dcff7a;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.content-row:not(:last-child) {
+  margin-bottom: 8px;
+}
